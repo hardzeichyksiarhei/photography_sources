@@ -1,0 +1,7 @@
+import './index.sass';
+
+$(function () {
+
+
+
+});

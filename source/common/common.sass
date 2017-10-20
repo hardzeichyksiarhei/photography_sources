@@ -1,0 +1,194 @@
+@import "common-sass/vars"
+@import "common-sass/base"
+
+@import "../libs/bootstrap/bootstrap.css"
+
+.section
+  position: relative
+  margin: 100px 0
+
+// Custom code
+.s-home
+  display: flex
+  align-items: center
+  height: 100vh
+  background: $accent_1 url('../img/bgImage.jpg') right bottom / cover no-repeat
+  color: #fff
+  margin: 0
+  padding: 0 140px
+
+.top-line
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 9999
+  padding: 30px 140px
+  background-color: transparent
+  transition: .25s all ease
+  &.active
+    background-color: $accent_1
+    padding: 20px 140px
+    .logo
+      align-items: center
+      .camera-icon
+        width: 25px
+        height: 25px
+      &__text
+        font-size: 16px
+    .top-nav
+      &__link
+        padding: 0 5px 3px
+        &.active, &:hover
+          &:before
+            width: 100%
+          &:after
+            opacity: 0
+  .col-md-12
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.logo
+  display: flex
+  align-items: flex-end
+  .camera-icon
+    width: 35px
+    height: 35px
+    margin-right: 10px
+  &__text
+    text-transform: uppercase
+    font-weight: 300
+    color: #fff
+    font-size: 20px
+    line-height: 1
+    margin: 0 0 -1px
+    span
+      font-weight: 600
+
+.top-nav
+  margin: 0
+  padding: 0
+  &__item
+    display: inline-block
+    list-style-type: none
+    margin-right: 25px
+    &:last-of-type
+      margin-right: 0
+  &__link
+    position: relative
+    display: inline-block
+    color: #fff
+    padding: 0 10px 5px
+    &.active, &:hover
+      &:before
+        content: ''
+        position: absolute
+        bottom: 0
+        right: 0
+        width: calc(100% + 10px)
+        height: 1px
+        background-color: $accent_2
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        height: calc(100% + 10px)
+        width: 1px
+        background-color: #fff
+
+.home-preview
+  border-left: 1px solid #fff
+  border-bottom: 1px solid $accent_2
+  padding: 0 20px
+  &:after, &:before
+    content: ''
+    position: absolute
+    z-index: 2
+  &:after
+    left: 15px
+    bottom: -100px
+    height: 100px
+    width: 1px
+    background-color: #fff
+  &:before
+    bottom: 0
+    left: -75px
+    width: 100px
+    height: 1px
+    background-color: $accent_2
+  &__title
+    font-family: "Trirong", sans-serif
+    font-weight: 300
+    font-size: 4.571em // 64
+    line-height: 1.2
+    margin: 0
+    padding-top: 30px
+    span
+      color: $accent_2
+  &__description
+    color: #aaabae
+    margin-bottom: 0
+    padding-bottom: 30px
+
+//.home-btn-set
+//  position: relative
+//  border-left: 1px solid #fff
+//  padding: 30px 0 30px 15px
+//  &:before
+//    content: ''
+//    position: absolute
+//    top: -1px
+//    left: -100px
+//    width: 100px
+//    height: 1px
+//    background-color: #fff
+
+.square
+  position: absolute
+  &--1
+    left: 0
+    bottom: 100px
+    width: 50px
+    height: 50px
+    background-color: rgba($accent_1, .3)
+  &--2
+    left: 0
+    bottom: 0
+    width: 100px
+    height: 100px
+    background-color: rgba($accent_1, .7)
+  &--3
+    left: 100px
+    bottom: 0
+    width: 50px
+    height: 50px
+    background-color: rgba($accent_1, .3)
+
+.arrow-link
+  position: absolute
+  z-index: 2
+  width: 30px
+  height: 30px
+  bottom: 15px
+  left: calc(50% - 15px)
+  transition: .25s all ease
+
+.btn
+  position: relative
+  display: inline-block
+  padding: 15px 30px
+  border-radius: 100px
+  text-transform: uppercase
+  line-height: 1
+  font-size: 12px
+  letter-spacing: 1px
+  &--accent-1
+    background-color: $accent_1
+    color: #fff
+  &--accent-2
+    background-color: $accent_2
+    color: $accent_1
+
+@import "common-sass/media"

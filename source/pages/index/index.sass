@@ -1,0 +1,54 @@
+@import "../../common/common-sass/vars"
+@import "../../common/common-sass/base"
+
+.s-about-me
+  background-color: #F7F7FC
+
+.s-about-me-content
+  padding: 60px 140px
+  &__title, &__sub-title
+    font-family: "Trirong", sans-serif
+    font-size: 46px
+    font-weight: 400
+    color: $accent_1
+    margin: 0
+  &__sub-title
+    font-size: 28px
+    margin: 30px 0
+
+.my-photo
+  background: $accent_1 url('../../img/myPhoto.jpg') center center / cover no-repeat
+
+
+/*==========  Desktop First  ==========*/
+
+@media only screen and (max-width : 1200px)
+  /**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+  .s-about-me-content
+    padding: 80px
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  .s-about-me-content
+    padding: 30px
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  .s-home
+    padding: 0 20px
+
+  .top-line
+    padding: 15px 20px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+  /**/
+
+
