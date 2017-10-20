@@ -6,6 +6,7 @@
 .section
   position: relative
   margin: 100px 0
+  background-color: #f7f7fc
 
 // Custom code
 .s-home
@@ -15,7 +16,7 @@
   background: $accent_1 url('../img/bgImage.jpg') right bottom / cover no-repeat
   color: #fff
   margin: 0
-  padding: 0 140px
+  padding: 0 150px
 
 .top-line
   position: fixed
@@ -23,12 +24,15 @@
   left: 0
   width: 100%
   z-index: 9999
-  padding: 30px 140px
+  padding: 30px 50px
   background-color: transparent
   transition: .25s all ease
+  display: flex
+  justify-content: space-between
+  align-items: center
   &.active
     background-color: $accent_1
-    padding: 20px 140px
+    padding: 20px 50px
     .logo
       align-items: center
       .camera-icon
@@ -44,10 +48,6 @@
             width: 100%
           &:after
             opacity: 0
-  .col-md-12
-    display: flex
-    justify-content: space-between
-    align-items: center
 
 .logo
   display: flex
@@ -79,7 +79,7 @@
     position: relative
     display: inline-block
     color: #fff
-    padding: 0 10px 5px
+    padding: 0 10px 6px
     &.active, &:hover
       &:before
         content: ''
@@ -99,22 +99,24 @@
         background-color: #fff
 
 .home-preview
+  position: relative
   border-left: 1px solid #fff
   border-bottom: 1px solid $accent_2
   padding: 0 20px
+  z-index: 2
   &:after, &:before
     content: ''
     position: absolute
     z-index: 2
   &:after
-    left: 15px
+    left: -1px
     bottom: -100px
     height: 100px
     width: 1px
     background-color: #fff
   &:before
-    bottom: 0
-    left: -75px
+    bottom: -1px
+    left: -100px
     width: 100px
     height: 1px
     background-color: $accent_2
@@ -131,19 +133,6 @@
     color: #aaabae
     margin-bottom: 0
     padding-bottom: 30px
-
-//.home-btn-set
-//  position: relative
-//  border-left: 1px solid #fff
-//  padding: 30px 0 30px 15px
-//  &:before
-//    content: ''
-//    position: absolute
-//    top: -1px
-//    left: -100px
-//    width: 100px
-//    height: 1px
-//    background-color: #fff
 
 .square
   position: absolute

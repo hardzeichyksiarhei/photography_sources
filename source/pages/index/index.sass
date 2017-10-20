@@ -1,11 +1,39 @@
 @import "../../common/common-sass/vars"
 @import "../../common/common-sass/base"
 
-.s-about-me
-  background-color: #F7F7FC
+.s-columns
+  display: flex
+  flex-flow: row wrap
+  &--reverse
+    flex-direction: row-reverse
+  &__item
+    &--1
+      flex-basis: 400px
+      flex-grow: 1
+    &--2
+      flex-basis: 650px
+      flex-grow: 12
+    &--image
+      flex-basis: 400px
+      flex-grow: 6
+    &--accent-1
+      background-color: $accent_1
+    &--accent-2
+      background-color: $accent_2
+
+.s-sidebar
+  padding: 50px
+  color: #fff
+  &__title
+    font-family: "Trirong", sans-serif
+    font-size: 46px
+    font-weight: 400
+    color: #fff
+
+.s-content
+  padding: 50px
 
 .s-about-me-content
-  padding: 60px 140px
   &__title, &__sub-title
     font-family: "Trirong", sans-serif
     font-size: 46px
@@ -18,7 +46,7 @@
 
 .my-photo
   background: $accent_1 url('../../img/myPhoto.jpg') center center / cover no-repeat
-
+  min-height: 90vh
 
 /*==========  Desktop First  ==========*/
 

@@ -11,54 +11,75 @@
 
     <div class="wrapper">
         <header class="top-line">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="logo">
-                            <img class="camera-icon img-responsive" src="../../img/camera.svg" alt="">
-                            <p class="logo__text"><span>Photo</span>graphy</p>
-                        </div>
-                        <ul class="top-nav hidden-xs">
-                            <li class="top-nav__item"><a class="top-nav__link active" href="#">Home</a></li>
-                            <li class="top-nav__item"><a class="top-nav__link" href="#">About me</a></li>
-                            <li class="top-nav__item"><a class="top-nav__link" href="#">Portfolio</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="logo">
+                <img class="camera-icon img-responsive" src="../../img/camera.svg" alt="">
+                <p class="logo__text"><span>Photo</span>graphy</p>
             </div>
+            <ul class="top-nav hidden-xs">
+                <li class="top-nav__item"><a class="top-nav__link active" href="#">Home</a></li>
+                <li class="top-nav__item"><a class="top-nav__link" href="#">About me</a></li>
+                <li class="top-nav__item"><a class="top-nav__link" href="#">Portfolio</a></li>
+            </ul>
         </header>
         <section class="section s-home">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="home-preview">
-                            <h2 class="home-preview__title">Hello, I'm<br><span>Jane</span> Jonson</h2>
-                            <p class="home-preview__description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="home-preview">
+                <h2 class="home-preview__title">Hello, I'm<br><span>Jane</span> Jonson</h2>
+                <p class="home-preview__description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
             </div>
             <span class="square square--1"></span>
             <span class="square square--2"></span>
             <span class="square square--3"></span>
             <a class="arrow-link" href="#"><img class="img-responsive" src="../../img/arrow.svg" alt="Arrow"></a>
         </section>
-        <section class="section s-about-me">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="s-about-me-content">
-                            <h4 class="s-about-me-content__title">About MySelf</h4>
-                            <p class="s-about-me-content__description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis cum delectus dolores et eum ipsum minus, molestiae nostrum numquam odio possimus quidem reiciendis sed suscipit. Adipisci atque natus neque quibusdam reiciendis soluta voluptatem? Amet consequatur deleniti eaque, error fugit laboriosam magni mollitia quidem quis quisquam recusandae reiciendis, sunt voluptatibus.
-                            </p>
-                            <h4 class="s-about-me-content__sub-title">What I do?</h4>
-                            <a href="#" class="btn btn--accent-1">View my behance profile</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 no-padding">
-                        <img class="my-photo img-responsive" src="../../img/myPhoto.jpg" alt="">
-                    </div>
+        <section class="section s-about-me s-columns s-columns--reverse">
+            <div class="s-columns__item s-columns__item--image s-columns__item--accent-1 my-photo"></div>
+            <div class="s-columns__item s-columns__item--2">
+                <div class="s-content s-about-me-content">
+                    <h4 class="s-about-me-content__title">About MySelf</h4>
+                    <p class="s-about-me-content__description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis cum delectus dolores et eum ipsum minus, molestiae nostrum numquam odio possimus quidem reiciendis sed suscipit. Adipisci atque natus neque quibusdam reiciendis soluta voluptatem? Amet consequatur deleniti eaque, error fugit laboriosam magni mollitia quidem quis quisquam recusandae reiciendis, sunt voluptatibus.
+                    </p>
+                    <h4 class="s-about-me-content__sub-title">What I do?</h4>
+                    <a href="#" class="btn btn--accent-1">View my behance profile</a>
+                </div>
+            </div>
+        </section>
+        <section class="section s-portfolio s-columns">
+            <div class="s-columns__item s-columns__item--1 s-columns__item--accent-2">
+                <div class="s-sidebar">
+                    <h4 class="s-sidebar__title">Portfolio</h4>
+                    <p class="s-sidebar__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolor dolorum ducimus, enim error id ipsum possimus praesentium quae ut! Ab adipisci, aliquid aperiam autem cum cumque eaque eos facere incidunt ipsam laboriosam libero maiores molestias nam optio pariatur porro quaerat quasi sed sit, tempore temporibus unde vitae! Adipisci aut deserunt ratione! Ipsum iusto necessitatibus tenetur vitae! Accusantium aliquam aliquid amet beatae consequuntur culpa dolor dolores doloribus ducimus ea eius est eum exercitationem expedita fugiat fugit impedit ipsa ipsum itaque iusto labore laboriosam laborum maiores maxime minima necessitatibus nulla, obcaecati omnis quae quia rem repellat repellendus sed tempore voluptas voluptatibus?</p>
+                </div>
+            </div>
+            <div class="s-columns__item s-columns__item--2">
+                <div class="s-content">
+                    Grid
+                </div>
+            </div>
+        </section>
+        <section class="section s-blog s-columns s-columns--reverse">
+            <div class="s-columns__item s-columns__item--1 s-columns__item--accent-1">
+                <div class="s-sidebar">
+                    <h4 class="s-sidebar__title">Blog</h4>
+                    <p class="s-sidebar__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolor dolorum ducimus, enim error id ipsum possimus praesentium quae ut! Ab adipisci, aliquid aperiam autem cum cumque eaque eos facere incidunt ipsam laboriosam libero maiores molestias nam optio pariatur porro quaerat quasi sed sit, tempore temporibus unde vitae! Adipisci aut deserunt ratione! Ipsum iusto necessitatibus tenetur vitae! Accusantium aliquam aliquid amet beatae consequuntur culpa dolor dolores doloribus ducimus ea eius est eum exercitationem expedita fugiat fugit impedit ipsa ipsum itaque iusto labore laboriosam laborum maiores maxime minima necessitatibus nulla, obcaecati omnis quae quia rem repellat repellendus sed tempore voluptas voluptatibus?</p>
+                </div>
+            </div>
+            <div class="s-columns__item s-columns__item--2">
+                <div class="s-content">
+                    Grid
+                </div>
+            </div>
+        </section>
+        <section class="section s-contacts s-columns">
+            <div class="s-columns__item s-columns__item--1 s-columns__item--accent-2">
+                <div class="s-sidebar">
+                    <h4 class="s-sidebar__title">Contacts</h4>
+                    <p class="s-sidebar__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolor dolorum ducimus, enim error id ipsum possimus praesentium quae ut! Ab adipisci, aliquid aperiam autem cum cumque eaque eos facere incidunt ipsam laboriosam libero maiores molestias nam optio pariatur porro quaerat quasi sed sit, tempore temporibus unde vitae! Adipisci aut deserunt ratione! Ipsum iusto necessitatibus tenetur vitae! Accusantium aliquam aliquid amet beatae consequuntur culpa dolor dolores doloribus ducimus ea eius est eum exercitationem expedita fugiat fugit impedit ipsa ipsum itaque iusto labore laboriosam laborum maiores maxime minima necessitatibus nulla, obcaecati omnis quae quia rem repellat repellendus sed tempore voluptas voluptatibus?</p>
+                </div>
+            </div>
+            <div class="s-columns__item s-columns__item--2">
+                <div class="s-content">
+                    Form
                 </div>
             </div>
         </section>
