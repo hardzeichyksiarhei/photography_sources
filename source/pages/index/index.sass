@@ -1,38 +1,6 @@
 @import "../../common/common-sass/vars"
 @import "../../common/common-sass/base"
 
-.s-columns
-  display: flex
-  flex-flow: row wrap
-  &--reverse
-    flex-direction: row-reverse
-  &__item
-    &--1
-      flex-basis: 400px
-      flex-grow: 1
-    &--2
-      flex-basis: 650px
-      flex-grow: 12
-    &--image
-      flex-basis: 400px
-      flex-grow: 6
-    &--accent-1
-      background-color: $accent_1
-    &--accent-2
-      background-color: $accent_2
-
-.s-sidebar
-  padding: 50px
-  color: #fff
-  &__title
-    font-family: "Trirong", sans-serif
-    font-size: 46px
-    font-weight: 400
-    color: #fff
-
-.s-content
-  padding: 50px
-
 .s-about-me-content
   &__title, &__sub-title
     font-family: "Trirong", sans-serif
@@ -47,6 +15,137 @@
 .my-photo
   background: $accent_1 url('../../img/myPhoto.jpg') center center / cover no-repeat
   min-height: 90vh
+
+.portfolio-card
+  overflow: hidden
+  position: relative
+  &:hover
+    .portfolio-card__cover
+      opacity: 1
+  &__cover
+    position: absolute
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba($accent_1, .8) url('../../img/plus.svg') center center / 60px 60px no-repeat
+    opacity: 0
+    transition: .25s all ease
+    padding: 20px 0
+  &__link
+    position: absolute
+    display: inline-block
+    width: 100%
+    height: 100%
+    z-index: 1
+  &__title
+    align-self: center
+    margin: 0
+    text-transform: uppercase
+    color: #fff
+    border-bottom: 1px solid $accent_2
+    padding: 0 15px
+
+.justified-gallery > .entry-visible > img,
+.justified-gallery > .entry-visible > a > img
+  transition: .4s filter ease, .4s transform ease, opacity 500ms ease-in
+
+.s-blog-content
+  padding: 10px
+
+.blog-grid
+  display: flex
+  flex-flow: row wrap
+
+.blog-card
+  display: flex
+  flex-flow: column wrap
+  width: calc(100% / 3)
+  flex: 1 1 300px
+  margin: 10px
+  background-color: #fff
+  &__container
+    flex-grow: 1
+    display: flex
+    flex-flow: column wrap
+    padding: 15px
+  &__title
+    margin: 0
+    font-size: 18px
+    color: $accent_1
+    text-transform: uppercase
+    font-weight: 400
+  &__description
+    flex-grow: 1
+  &__meta
+    display: flex
+    justify-content: space-between
+    font-size: 12px
+    margin-top: 10px
+  &__link
+    position: relative
+    color: $accent_1
+    font-weight: 600
+    font-size: 16px
+    padding: 0 15px 0 0
+    align-self: flex-start
+    &:hover:before
+      content: ''
+      position: absolute
+      bottom: 2px
+      left: 0
+      width: 100%
+      height: 10px
+      background-color: $accent_2
+      opacity: .5
+
+.blog-category-list
+  margin: 0
+  padding: 0
+  &__item
+    display: inline-block
+    list-style-type: none
+
+
+.s-form
+  padding: 100px
+
+.form
+  &__group
+    margin-bottom: 30px
+  &__control
+    width: 100%
+    border-radius: 50px
+    border: 1px solid #95989A
+    padding: 15px
+    text-align: center
+    resize: none
+    outline: none
+    &::placeholder
+      color: #c7c7c7
+  &__btn
+    padding: 17px 30px
+    border-radius: 100px
+    text-transform: uppercase
+    line-height: 1
+    font-size: 12px
+    letter-spacing: 1px
+    background-color: transparent
+    outline: none
+    &--accent-1
+      float: right
+      width: 30%
+      border: 2px solid $accent_1
+      color: $accent_1
+    &--accent-2
+      float: left
+      width: 65%
+      border: 2px solid $accent_2
+      color: $accent_2
+
 
 /*==========  Desktop First  ==========*/
 
@@ -64,6 +163,23 @@
 @media only screen and (max-width : 768px)
   .s-about-me-content
     padding: 30px
+  .s-sidebar
+    padding: 30px
+  .s-content
+    padding: 30px
+  .s-form
+    padding: 30px
+
+  .form
+    &__btn
+      display: block
+      &--accent-1
+        float: none
+        width: 100%
+      &--accent-2
+        float: none
+        width: 100%
+        margin-bottom: 30px
 
 
 /* Extra Small Devices, Phones */

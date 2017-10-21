@@ -8,6 +8,71 @@
   margin: 100px 0
   background-color: #f7f7fc
 
+.s-columns
+  display: flex
+  flex-flow: row wrap
+  &--reverse
+    flex-direction: row-reverse
+  &__item
+    &--1
+      flex-basis: 400px
+      flex-grow: 1
+    &--2
+      flex-basis: 650px
+      flex-grow: 12
+    &--image
+      flex-basis: 400px
+      flex-grow: 6
+    &--accent-1
+      background-color: $accent_1
+      .s-sidebar-list
+        &__item
+          color: #aaabae
+    &--accent-2
+      background-color: $accent_2
+      .s-sidebar-list
+        &__item
+          color: #e9e9e9
+
+.s-sidebar
+  display: flex
+  flex-flow: column wrap
+  padding: 50px
+  color: #fff
+  height: 100%
+  &__content
+    flex-grow: 1
+  &__title
+    font-family: "Trirong", sans-serif
+    font-size: 46px
+    font-weight: 400
+    color: #fff
+    margin-top: 0
+    margin-bottom: 40px
+  .btn
+    margin-top: 50px
+    align-self: center
+  &__thank-you
+    text-align: center
+    text-transform: uppercase
+    font-size: 18px
+
+.s-sidebar-list
+  margin: 50px 0 0
+  padding: 0
+  &__item
+    list-style-type: none
+    font-size: 18px
+    margin-bottom: 15px
+    span
+      text-transform: uppercase
+      color: #fff
+      margin-bottom: 5px
+      font-size: 1rem
+
+.s-content
+  padding: 50px
+
 // Custom code
 .s-home
   display: flex
@@ -31,23 +96,12 @@
   justify-content: space-between
   align-items: center
   &.active
-    background-color: $accent_1
+    background-color: darken($accent_1, 5%)
     padding: 20px 50px
     .logo
       align-items: center
-      .camera-icon
-        width: 25px
-        height: 25px
       &__text
         font-size: 16px
-    .top-nav
-      &__link
-        padding: 0 5px 3px
-        &.active, &:hover
-          &:before
-            width: 100%
-          &:after
-            opacity: 0
 
 .logo
   display: flex
@@ -99,6 +153,7 @@
         background-color: #fff
 
 .home-preview
+  width: 60%
   position: relative
   border-left: 1px solid #fff
   border-bottom: 1px solid $accent_2
@@ -167,17 +222,35 @@
 .btn
   position: relative
   display: inline-block
-  padding: 15px 30px
+  padding: 10px 30px
   border-radius: 100px
   text-transform: uppercase
   line-height: 1
   font-size: 12px
   letter-spacing: 1px
   &--accent-1
+    border: 2px solid $accent_1
     background-color: $accent_1
     color: #fff
   &--accent-2
+    border: 2px solid $accent_2
     background-color: $accent_2
     color: $accent_1
+  &--white
+    border: 2px solid #fff
+    color: #fff
+
+.main-footer
+  position: relative
+  background-color: $accent_1
+  padding-top: 100px
+  &__copyright
+    padding: 15px
+    margin: 0
+    background-color: darken($accent_1, 5%)
+    color: #fff
+    text-align: center
+
+
 
 @import "common-sass/media"

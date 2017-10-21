@@ -1,4 +1,7 @@
-module.exports = function() {
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
+
+module.exports = function(env) {
     return {
         module: {
             rules: [
@@ -11,5 +14,16 @@ module.exports = function() {
                 },
             ],
         },
+        plugins: [
+            new ImageminPlugin({
+                disable: env !== 'production',
+                plugins: [
+                    ImageminMozjpeg({
+                        quality: 60,
+                        progressive: true
+                    })
+                ]
+            })
+        ]
     };
 };

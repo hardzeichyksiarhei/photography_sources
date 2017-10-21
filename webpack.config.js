@@ -21,7 +21,8 @@ const common = merge([
     {
         entry: {
             'common': PATHS.source + '/common/common.js',
-            'index': PATHS.source + '/pages/index/index.js'
+            'index': PATHS.source + '/pages/index/index.js',
+            'portfolio': PATHS.source + '/pages/portfolio/portfolio.js'
         },
         output: {
             path: PATHS.build,
@@ -33,6 +34,11 @@ const common = merge([
                 chunks: ['index', 'common'],
                 template: PATHS.source + '/pages/index/index.html'
             }),
+            new HtmlWebpackPlugin({
+                filename: 'portfolio.html',
+                chunks: ['portfolio', 'common'],
+                template: PATHS.source + '/pages/portfolio/portfolio.html'
+            }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'common'
             }),
@@ -43,14 +49,17 @@ const common = merge([
         ]
     },
     html(),
-    images(),
     fonts()
 ]);
 
 module.exports = function(env) {
+    let commonImage = merge([
+        common,
+        images(env)
+    ]);
     if (env === 'production'){
         return merge([
-            common,
+            commonImage,
             extractCSS(),
             babel(),
             uglifyJS()
@@ -58,7 +67,7 @@ module.exports = function(env) {
     }
     if (env === 'development'){
         return merge([
-            common,
+            commonImage,
             devserver(),
             sass(),
             babel(),
