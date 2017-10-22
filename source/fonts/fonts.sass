@@ -13,3 +13,31 @@
 @include font-face("Muli", "./Muli/Muli-Light", 300, $file-formats: ttf)
 @include font-face("Muli", "./Muli/Muli-Regular", normal, $file-formats: ttf)
 @include font-face("Muli", "./Muli/Muli-Bold", 600, $file-formats: ttf)
+
+// Icomoon font
+@include font-face("Icomoon", "./Icomoon/Icomoon", normal, $file-formats: ttf eot woff)
+
+
+[class^="icon-"], [class*=" icon-"]
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Icomoon', sans-serif !important
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
+.icon-google:before 
+  content: "\e901"
+
+.icon-pinterest:before 
+  content: "\e903"
+
+.icon-behance:before 
+  content: "\e900"

@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Photography - Portfolio</title>
 </head>
 <body>
 
@@ -13,9 +16,9 @@
                 <p class="logo__text"><span>Photo</span>graphy</p>
             </div>
             <ul class="top-nav hidden-xs">
-                <li class="top-nav__item"><a class="top-nav__link" href="/">Home</a></li>
-                <li class="top-nav__item"><a class="top-nav__link" href="#">About me</a></li>
-                <li class="top-nav__item"><a class="top-nav__link active" href="/portfolio.html">Portfolio</a></li>
+                <li class="top-nav__item"><a class="top-nav__link" href="/photography">Home</a></li>
+                <li class="top-nav__item"><a class="top-nav__link" href="/photography/about-me.html">About me</a></li>
+                <li class="top-nav__item"><a class="top-nav__link active" href="/photography/portfolio.html">Portfolio</a></li>
             </ul>
         </header>
         <section class="section s-home">
@@ -27,7 +30,21 @@
             <span class="square square--2"></span>
             <span class="square square--3"></span>
             <a class="arrow-link" href="#"><img class="img-responsive" src="../../img/arrow.svg" alt="Arrow"></a>
+            <ul class="s-home-social-list hidden-xs">
+                <li class="s-home-social-list__item">
+                    <a class="s-home-social-list__link" href="#"><i class="icon-google"></i></a>
+                </li>
+                <li class="s-home-social-list__item">
+                    <a class="s-home-social-list__link" href="#"><i class="icon-behance"></i></a>
+                </li>
+                <li class="s-home-social-list__item">
+                    <a class="s-home-social-list__link" href="#"><i class="icon-pinterest"></i></a>
+                </li>
+            </ul>
         </section>
+        <div class="s-divider">
+            <span class="s-divider__text s-divider__text--accent-1">01</span>
+        </div>
         <section class="section s-portfolio s-columns s-columns--reverse">
             <div class="s-columns__item s-columns__item--1 s-columns__item--accent-1">
                 <div class="s-sidebar">
@@ -88,7 +105,18 @@
                 </div>
             </div>
         </section>
+        <div class="s-divider"></div>
         <footer class="main-footer">
+            <div class="main-footer-grid">
+                <div class="main-footer-grid__column my-info">
+                    <h5 class="main-footer-grid__title">My info</h5>
+                    <div class="main-footer-grid__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolores ea enim hic itaque laudantium necessitatibus nulla odit, omnis, quae quam quidem reprehenderit repudiandae, similique tempora tempore tenetur ullam veritatis.</div>
+                </div>
+                <div class="main-footer-grid__column popular-post">
+                    <h5 class="main-footer-grid__title">Best Blog Posts</h5>
+                    <div class="main-footer-grid__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolores ea enim hic itaque laudantium necessitatibus nulla odit, omnis, quae quam quidem reprehenderit repudiandae, similique tempora tempore tenetur ullam veritatis.</div>
+                </div>
+            </div>
             <p class="main-footer__copyright">
                 All Rights @ 2017 By Hardz
             </p>

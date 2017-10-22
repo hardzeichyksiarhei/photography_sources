@@ -5,8 +5,22 @@
 
 .section
   position: relative
-  margin: 100px 0
   background-color: #f7f7fc
+
+.s-divider
+  text-align: center
+  padding: 80px
+  background-color: #f7f7fc
+  &__text
+    font-family: "Trirong", sans-serif
+    position: relative
+    font-size: 42px
+    line-height: 1
+    letter-spacing: 2px
+    &--accent-1
+      color: $accent_1
+    &--accent-2
+      color: $accent_2
 
 .s-columns
   display: flex
@@ -73,7 +87,6 @@
 .s-content
   padding: 50px
 
-// Custom code
 .s-home
   display: flex
   align-items: center
@@ -85,38 +98,40 @@
 
 .top-line
   position: fixed
-  top: 0
+  top: 15px
   left: 0
   width: 100%
-  z-index: 9999
-  padding: 30px 50px
+  z-index: 999
+  padding: 20px 50px
   background-color: transparent
-  transition: .25s all ease
+  transition: .25s top linear, .25s background-color linear
   display: flex
   justify-content: space-between
   align-items: center
   &.active
     background-color: darken($accent_1, 5%)
-    padding: 20px 50px
+    top: 0
     .logo
-      align-items: center
       &__text
         font-size: 16px
+        bottom: 10.5px
 
 .logo
-  display: flex
-  align-items: flex-end
+  position: relative
   .camera-icon
     width: 35px
     height: 35px
-    margin-right: 10px
   &__text
+    position: absolute
+    bottom: 0
+    left: 45px
     text-transform: uppercase
     font-weight: 300
     color: #fff
     font-size: 20px
     line-height: 1
     margin: 0 0 -1px
+    transition: .25s bottom linear, .25s font-size linear
     span
       font-weight: 600
 
@@ -153,7 +168,7 @@
         background-color: #fff
 
 .home-preview
-  width: 60%
+  width: 55%
   position: relative
   border-left: 1px solid #fff
   border-bottom: 1px solid $accent_2
@@ -217,7 +232,43 @@
   height: 30px
   bottom: 15px
   left: calc(50% - 15px)
-  transition: .25s all ease
+  transition: .25s all linear
+
+.s-home-social-list
+  position: absolute
+  bottom: 0
+  right: 0
+  padding: 15px 30px 10px
+  margin: 0
+  border-top: 1px solid #fff
+  border-left: 1px solid #fff
+  &:before, &:after
+    content: ''
+    position: absolute
+    background-color: #fff
+  &:before
+    top: -40px
+    left: -1px
+    width: 1px
+    height: 40px
+  &:after
+    top: -1px
+    left: -40px
+    height: 1px
+    width: 40px
+  &__item
+    display: inline-block
+    list-style-type: none
+    margin-right: 25px
+    &:last-of-type
+      margin-right: 0
+  &__link
+    display: inline-block
+    color: #fff
+    font-size: 16px
+    transition: .25s color linear
+    &:hover
+      color: $accent_2
 
 .btn
   position: relative
@@ -230,12 +281,10 @@
   letter-spacing: 1px
   &--accent-1
     border: 2px solid $accent_1
-    background-color: $accent_1
-    color: #fff
+    color: $accent_1
   &--accent-2
     border: 2px solid $accent_2
-    background-color: $accent_2
-    color: $accent_1
+    color: $accent_2
   &--white
     border: 2px solid #fff
     color: #fff
@@ -243,7 +292,6 @@
 .main-footer
   position: relative
   background-color: $accent_1
-  padding-top: 100px
   &__copyright
     padding: 15px
     margin: 0
@@ -251,6 +299,35 @@
     color: #fff
     text-align: center
 
-
+.main-footer-grid
+  display: flex
+  flex-flow: row wrap
+  padding: 50px 100px 100px
+  margin: 0 -50px
+  &__column
+    flex: 1 1 400px
+    padding: 0 50px
+    margin-top: 50px
+  &__title
+    font-size: 20px
+    color: #fff
+    font-weight: 400
+    border-bottom: 1px solid #fff
+    border-left: 1px solid #fff
+    padding: 12px 15px 17px
+    margin: 0
+  &__content
+    position: relative
+    color: $color_text
+    border-left: 1px solid #fff
+    padding: 17px 15px 17px
+    &:before
+      content: ''
+      position: absolute
+      top: -1px
+      left: -50px
+      width: 50px
+      height: 1px
+      background-color: #fff
 
 @import "common-sass/media"

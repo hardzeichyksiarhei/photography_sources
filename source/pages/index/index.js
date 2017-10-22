@@ -11,8 +11,7 @@ $(function () {
 
     $('#portfolio-grid').justifiedGallery({
         rowHeight: 320,
-        margins: 20,
-        lastRow: 'hide'
+        margins: 20
     });
 
     //------------------------------------------
