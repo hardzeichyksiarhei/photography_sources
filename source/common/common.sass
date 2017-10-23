@@ -12,7 +12,7 @@
   padding: 80px
   background-color: #f7f7fc
   &__text
-    font-family: "Trirong", sans-serif
+    font-family: "PlayfairDisplay", sans-serif
     position: relative
     font-size: 42px
     line-height: 1
@@ -57,7 +57,7 @@
   &__content
     flex-grow: 1
   &__title
-    font-family: "Trirong", sans-serif
+    font-family: "PlayfairDisplay", sans-serif
     font-size: 46px
     font-weight: 400
     color: #fff
@@ -87,6 +87,76 @@
 .s-content
   padding: 50px
 
+.hamburger
+  height: 26px
+  transition-property: opacity, filter
+  transition-duration: .15s
+  transition-timing-function: linear
+  margin-top: -2px
+
+.hamburger-box
+  width: 30px
+  height: 24px
+  display: inline-block
+  position: relative
+
+.hamburger-inner
+  display: block
+  top: 50%
+
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+  width: 30px
+  height: 2px
+  background-color: #fff
+  border-radius: 2px
+  position: absolute
+  transition-property: transform
+  transition-duration: .15s
+  transition-timing-function: ease
+
+.hamburger-inner::after, .hamburger-inner::before
+  content: ""
+  display: block
+
+.hamburger-inner::before
+  top: -10px
+
+.hamburger-inner::after
+  bottom: -10px
+
+.hamburger--collapse .hamburger-inner
+  top: auto
+  bottom: 0
+  transition-duration: .15s
+  transition-delay: .15s
+  transition-timing-function: cubic-bezier(.55, .055, .675, .19)
+
+.hamburger--collapse .hamburger-inner::after
+  top: -20px
+  transition: top .3s .3s cubic-bezier(.33333, .66667, .66667, 1), opacity .1s linear
+
+.hamburger--collapse .hamburger-inner::before
+  transition: top .12s .3s cubic-bezier(.33333, .66667, .66667, 1), transform .15s cubic-bezier(.55, .055, .675, .19)
+
+
+.hamburger--collapse.is-active .hamburger-inner
+  transform: translate3d(0, -10px, 0) rotate(-45deg)
+  transition-delay: .32s
+  transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+
+
+.hamburger--collapse.is-active .hamburger-inner::after
+  top: 0
+  opacity: 0
+  transition: top .3s cubic-bezier(.33333, 0, .66667, .33333), opacity .1s .27s linear
+
+
+.hamburger--collapse.is-active .hamburger-inner::before
+  top: 0
+  transform: rotate(-90deg)
+  transition: top .12s .18s cubic-bezier(.33333, 0, .66667, .33333), transform .15s .42s cubic-bezier(.215, .61, .355, 1)
+
 .s-home
   display: flex
   align-items: center
@@ -101,8 +171,9 @@
   top: 15px
   left: 0
   width: 100%
+  height: 65px
   z-index: 999
-  padding: 20px 50px
+  padding: 0 50px
   background-color: transparent
   transition: .25s top linear, .25s background-color linear
   display: flex
@@ -148,7 +219,7 @@
     position: relative
     display: inline-block
     color: #fff
-    padding: 0 10px 6px
+    padding: 0 8px 5px
     &.active, &:hover
       &:before
         content: ''
@@ -166,6 +237,22 @@
         height: calc(100% + 10px)
         width: 1px
         background-color: #fff
+
+.top-nav-mobile
+  display: none
+  position: fixed
+  z-index: 1000
+  top: 65px
+  left: 0
+  width: 100%
+  background-color: $accent_1
+  padding: 50px 20px
+  &__item
+    display: block
+    text-align: center
+    padding: 20px 0
+    margin: 0
+
 
 .home-preview
   width: 55%
@@ -191,7 +278,7 @@
     height: 1px
     background-color: $accent_2
   &__title
-    font-family: "Trirong", sans-serif
+    font-family: "PlayfairDisplay", sans-serif
     font-weight: 300
     font-size: 4.571em // 64
     line-height: 1.2
@@ -273,7 +360,7 @@
 .btn
   position: relative
   display: inline-block
-  padding: 10px 30px
+  padding: 15px 30px 13px
   border-radius: 100px
   text-transform: uppercase
   line-height: 1
@@ -329,5 +416,12 @@
       width: 50px
       height: 1px
       background-color: #fff
+
+.info-table
+  span
+    display: inline-block
+    color: #fff
+    margin-right: 5px
+    margin-bottom: 10px
 
 @import "common-sass/media"

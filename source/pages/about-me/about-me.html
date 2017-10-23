@@ -9,6 +9,14 @@
 </head>
 <body>
 
+    <nav class="nav-menu-mobile">
+        <ul id="nav-menu-mobile" class="menu top-nav top-nav-mobile">
+            <li class="top-nav__item top-nav-mobile__item"><a class="top-nav__link top-nav-mobile__link" href="/photography">Home</a></li>
+            <li class="top-nav__item top-nav-mobile__item"><a class="top-nav__link top-nav-mobile__link active" href="/photography/about-me.html">About me</a></li>
+            <li class="top-nav__item top-nav-mobile__item"><a class="top-nav__link top-nav-mobile__link" href="/photography/portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
+
     <div class="wrapper">
         <header class="top-line">
             <div class="logo">
@@ -20,6 +28,11 @@
                 <li class="top-nav__item"><a class="top-nav__link active" href="/photography/about-me.html">About me</a></li>
                 <li class="top-nav__item"><a class="top-nav__link" href="/photography/portfolio.html">Portfolio</a></li>
             </ul>
+            <a href="#menu" class="hamburger hamburger--collapse visible-xs">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </a>
         </header>
         <section class="section s-home">
             <div class="home-preview">
@@ -123,18 +136,46 @@
             <div class="main-footer-grid">
                 <div class="main-footer-grid__column my-info">
                     <h5 class="main-footer-grid__title">My info</h5>
-                    <div class="main-footer-grid__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolores ea enim hic itaque laudantium necessitatibus nulla odit, omnis, quae quam quidem reprehenderit repudiandae, similique tempora tempore tenetur ullam veritatis.</div>
+                    <div class="main-footer-grid__content info-table-wrapper"></div>
                 </div>
                 <div class="main-footer-grid__column popular-post">
-                    <h5 class="main-footer-grid__title">Best Blog Posts</h5>
+                    <h5 class="main-footer-grid__title">Other information</h5>
                     <div class="main-footer-grid__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolores ea enim hic itaque laudantium necessitatibus nulla odit, omnis, quae quam quidem reprehenderit repudiandae, similique tempora tempore tenetur ullam veritatis.</div>
                 </div>
             </div>
             <p class="main-footer__copyright">
-                All Rights @ 2017 By Hardz
+                @ 2017. Все права защищены. Разработал Алешков Дмитрий Викторович
             </p>
         </footer>
     </div>
 
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter46382673 = new Ya.Metrika({
+                        id:46382673,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera === "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/46382673" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

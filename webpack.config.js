@@ -9,6 +9,7 @@ const css = require('./webpack/css');
 const extractCSS = require('./webpack/css.extract');
 const uglifyJS = require('./webpack/js.uglify');
 const html = require('./webpack/html');
+const xml = require('./webpack/xml');
 const images = require('./webpack/images');
 const fonts = require('./webpack/fonts');
 
@@ -55,6 +56,7 @@ const common = merge([
         ]
     },
     html(),
+    xml(),
     fonts()
 ]);
 

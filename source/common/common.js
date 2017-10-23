@@ -4,6 +4,8 @@ import '../fonts/fonts.sass';
 //Common style
 import './common.sass';
 
+import infoXML from '../xml/info.xml';
+
 $(function () {
 
     let
@@ -36,7 +38,7 @@ $(function () {
             topLine.addClass('active');
         }
         else {
-            topLine.removeClass('active');
+            if ($(".top-nav-mobile").css('display') !== 'block') topLine.removeClass('active');
         }
     };initTopLine();
 
@@ -57,8 +59,34 @@ $(function () {
         onResize();
     });
 
+    $(".hamburger--collapse").click(function () {
+        $(this).toggleClass("is-active");
+
+        if ($window.scrollTop() === 0)
+            $('.top-line').toggleClass('active');
+
+        setTimeout(() => {
+            $(".top-nav-mobile").slideToggle();
+        }, 200);
+        return false;
+    });
+
     //------------------------------------------
     //------------------------------------------
+
+    let infoXMLContent = "<table class='info-table'>";
+
+    let dataXML = infoXML.items.item[0];
+
+    infoXMLContent += "<tr><td><span>ФИО: </span>" + dataXML['fio'] + "</td></tr>";
+    infoXMLContent += "<tr><td><span>Факультет:  </span>" + dataXML['faculty'] + "</td></tr>";
+    infoXMLContent += "<tr><td><span>Специальность: </span>" + dataXML['specialty'] + "</td></tr>";
+    infoXMLContent += "<tr><td><span>Курс: </span>" + dataXML['class'] + "</td></tr>";
+    infoXMLContent += "<tr><td><span>Группа: </span>" + dataXML['group'] + "</td></tr>";
+
+    infoXMLContent += "</table>";
+
+    $('.info-table-wrapper').append(infoXMLContent);
 
 });
 
