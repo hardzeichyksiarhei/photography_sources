@@ -1,5 +1,8 @@
 //Fonts
-import '../fonts/fonts.sass';
+import './../fonts/fonts.sass';
+
+// Bootstrap style
+import "./../libs/bootstrap/bootstrap.css"
 
 //Common style
 import './common.sass';
