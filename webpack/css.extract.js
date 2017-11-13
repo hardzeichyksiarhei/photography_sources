@@ -36,12 +36,12 @@ module.exports = function(paths) {
                 filename: './css/[name].css',
                 allChunks: true
             }),
-            new OptimizeCssAssetsPlugin({
-                assetNameRegExp: /\.css$/g,
-                cssProcessor: require('cssnano'),
-                cssProcessorOptions: { discardComments: {removeAll: true } },
-                canPrint: true
-            })
+            // new OptimizeCssAssetsPlugin({
+            //     assetNameRegExp: /\.css$/g,
+            //     cssProcessor: require('cssnano'),
+            //     cssProcessorOptions: { discardComments: {removeAll: true } },
+            //     canPrint: true
+            // })
         ],
     };
 };
